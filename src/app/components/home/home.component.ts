@@ -1,13 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html',
-  styles: []
+  templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  paises: any[] = [];
+
+  constructor(private http: HttpClient) {
+    console.log('Listo');
+    this.http.get('https://restcountries.eu/rest/v2/lang/es')
+      .subscribe( (data: any) => {
+        this.paises = data;
+        console.log(data);
+      });
+   }
 
   ngOnInit() {
   }
