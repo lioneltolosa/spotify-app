@@ -13,6 +13,9 @@ import { CallComponent } from './components/call/call.component';
 // Routes
 import { ROUTES } from './app.routes';
 
+// Pipes
+import { NoimagePipe } from './pipes/noimage.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +24,7 @@ import { ROUTES } from './app.routes';
     ArtistComponent,
     NavbarComponent,
     CallComponent,
+    NoimagePipe,
   ],
   imports: [
     BrowserModule,
