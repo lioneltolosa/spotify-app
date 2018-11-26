@@ -9,6 +9,7 @@ import { SearchComponent } from './components/search/search.component';
 import { ArtistComponent } from './components/artist/artist.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { CallComponent } from './components/call/call.component';
+import { CardsComponent } from './components/cards/cards.component';
 
 // Routes
 import { ROUTES } from './app.routes';
@@ -25,6 +26,7 @@ import { NoimagePipe } from './pipes/noimage.pipe';
     NavbarComponent,
     CallComponent,
     NoimagePipe,
+    CardsComponent,
   ],
   imports: [
     BrowserModule,
