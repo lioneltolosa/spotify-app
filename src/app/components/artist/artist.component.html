@@ -18,3 +18,35 @@
         </button>
     </div>
 </div>
+
+<!-- <ul *ngFor="let top of topTracks" class="list-group">
+    <li class="list-group-item">{{top.name}}</li>
+</ul> -->
+
+<div class="row">
+    <div class="col">
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Image</th>
+                    <th scope="col">Album</th>
+                    <th scope="col">Song</th>
+                    <th scope="col">View</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let i of topTracks">
+                    <td>
+                        <img [src]="i.album.images[0].url" class="img-thumbnail img-circle">
+                    </td>
+                    <td>{{i.album.name}}</td>
+                    <td>{{i.name}}</td>
+                    <td>
+                        <!-- <audio [src]="i.preview_url" controls></audio> -->
+                        <iframe [src]="i.uri | domseguro" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

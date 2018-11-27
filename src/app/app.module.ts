@@ -10,13 +10,15 @@ import { ArtistComponent } from './components/artist/artist.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { CallComponent } from './components/call/call.component';
 import { CardsComponent } from './components/cards/cards.component';
+import { LoadingComponent } from './components/shared/loading/loading.component';
 
 // Routes
 import { ROUTES } from './app.routes';
 
 // Pipes
 import { NoimagePipe } from './pipes/noimage.pipe';
-import { LoadingComponent } from './components/shared/loading/loading.component';
+import { DomseguroPipe } from './pipes/domseguro.pipe';
+
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
     NavbarComponent,
     CallComponent,
     NoimagePipe,
+    DomseguroPipe,
     CardsComponent,
     LoadingComponent,
   ],
