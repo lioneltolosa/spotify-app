@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row mb-4">
     <div class="col">
         <input #termino type="text" (keyup)="search(termino.value)" class="form-control" placeholder="Search Artist">
     </div>
@@ -12,5 +12,5 @@
         </div>
     </div>
 </div> -->
-
-<app-cards [songs]="artists"></app-cards>
+<app-loading *ngIf="loading"></app-loading>
+<app-cards *ngIf="!loading" [songs]="artists"></app-cards>
