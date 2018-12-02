@@ -12,6 +12,7 @@ import { CallComponent } from './components/call/call.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
 import { TrackComponent } from './components/track/track.component';
+import { DinnerComponent } from './components/dinner/dinner.component';
 
 // Routes
 import { ROUTES } from './app.routes';
@@ -19,6 +20,8 @@ import { ROUTES } from './app.routes';
 // Pipes
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { DomseguroPipe } from './pipes/domseguro.pipe';
+import { CardPlaylistComponent } from './components/card-playlist/card-playlist.component';
+
 
 
 
@@ -35,6 +38,8 @@ import { DomseguroPipe } from './pipes/domseguro.pipe';
     CardsComponent,
     LoadingComponent,
     TrackComponent,
+    DinnerComponent,
+    CardPlaylistComponent,
   ],
   imports: [
     BrowserModule,

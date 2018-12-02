@@ -1,0 +1,11 @@
+<!-- <div class="card-columns">
+    <div *ngFor="let play of newPlaylists" class="card">
+        <img class="card-img-top" [src]="play.images[0].url" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{ play.name}}</h5>
+            <p class="card-text"></p>
+        </div>
+    </div>
+</div> -->
+
+<app-card-playlist [items]="newPlaylists"></app-card-playlist>

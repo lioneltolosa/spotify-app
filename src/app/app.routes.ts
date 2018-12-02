@@ -4,6 +4,7 @@ import { SearchComponent } from './components/search/search.component';
 import { CallComponent } from './components/call/call.component';
 import { ArtistComponent } from './components/artist/artist.component';
 import { TrackComponent } from './components/track/track.component';
+import { DinnerComponent } from './components/dinner/dinner.component';
 
 export const ROUTES: Routes = [
     {path: 'home', component: HomeComponent},
@@ -11,6 +12,7 @@ export const ROUTES: Routes = [
     {path: 'artist/:id', component: ArtistComponent},
     {path: 'call', component: CallComponent},
     {path: 'track', component: TrackComponent},
+    {path: 'dinner', component: DinnerComponent},
     {path: '', pathMatch: 'full', redirectTo: 'home'},
     {path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];

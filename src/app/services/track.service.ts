@@ -12,7 +12,7 @@ export class TrackService {
 
     getTrack() {
         const headers = new HttpHeaders({
-            'Authorization': 'Bearer BQDzP37-LqSytjcjyL7qdrG5gOuSPdz7zr_jLqLBriSAU2lw9b4QV98gPTEoNiLIbDJ0XG2aBBDoUlnrc1s'
+            'Authorization': 'Bearer BQBsToh6iQX1wBJ5iSNhr1IPaniQeAbSDKsSy1hVLxRsW6yMAVzCpT8XaKifHwhF_1bV_1aHTusZW2sAbK0'
         });
 
         return this.http.get('	https://api.spotify.com/v1/browse/categories', {headers});
