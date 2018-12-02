@@ -1,0 +1,8 @@
+<div class="card-columns">
+    <div (click)="category(track)" *ngFor="let track of newTracks" class="card puntero">
+        <img class="card-img-top" [src]="track.icons[0].url" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{track.name}}</h5>
+        </div>
+    </div>
+</div>
