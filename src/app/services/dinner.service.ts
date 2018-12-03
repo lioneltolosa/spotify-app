@@ -13,10 +13,18 @@ export class DinnerService {
 
     getNewRelease() {
         const headers = new HttpHeaders ({
-            'Authorization': 'Bearer BQD0PyMGPfU5V0Vnri_lW2BgaWRqbUHBOrlqESGpDpWsSUQEtAZLOqakW6nRDJQof-Mb8oWd7bjmDhCLvp4'
+            'Authorization': 'Bearer BQCfquYxFOaW5O45XR1QwzOb8Oggjh6AzQWUf4ppEXJb_nxxzm1Q0lO99H3CsG-f4-Xaxr6oh2_ga0aINQY'
         });
 
-        return this.http.get('https://api.spotify.com/v1/browse/featured-playlists' , { headers })
-            .pipe( map (data => data['playlists'].items ));
+        return this.http.get('https://api.spotify.com/v1/browse/categories' , { headers });
+    }
+
+    getplaylist(category_id: String) {
+        const headers = new HttpHeaders ({
+            'Authorization': 'Bearer BQCfquYxFOaW5O45XR1QwzOb8Oggjh6AzQWUf4ppEXJb_nxxzm1Q0lO99H3CsG-f4-Xaxr6oh2_ga0aINQY'
+        });
+
+        return this.http.get(`https://api.spotify.com/v1/browse/categories/${ category_id }?country=SE`, { headers });
+            // pipe( map (data => data['playlists'].items ));
     }
 }
