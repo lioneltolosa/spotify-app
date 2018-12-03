@@ -12,12 +12,10 @@ export class DinnerComponent implements OnInit {
 
   constructor(private dinnerService: DinnerService) {
     this.dinnerService.getNewRelease()
-      .subscribe( (data) => {
-        // console.log(data['playlists'].items);
-        // this.newPlaylists = data['playlists'].items;
-        console.log(data);
-        this.newPlaylists = data;
-      });
+      .subscribe((data: any) => {
+        console.log(data.categories.items);
+        this.newPlaylists = data.categories.items;
+    });
   }
 
   ngOnInit() {
