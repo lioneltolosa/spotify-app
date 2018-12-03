@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card-playlist',
@@ -9,7 +10,16 @@ export class CardPlaylistComponent implements OnInit {
 
   @Input() inputItemCardPlaylist: any[] = [];
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  viewCategory(item: any) {
+    console.log(item.id);
+
+
+    // console.log(categoryId);
+    this.router.navigate( ['/playlist', item.id] );
+
+  }
 
   ngOnInit() {
   }
