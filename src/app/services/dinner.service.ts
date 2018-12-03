@@ -13,7 +13,7 @@ export class DinnerService {
 
     getNewRelease() {
         const headers = new HttpHeaders ({
-            'Authorization': 'Bearer BQBqrYgVRvZbtv0iAez3UmydsaT7IxQqxipG3V25bqOZkK1_5pEDb3fVuqA5sjujaLAsBm0H2VbD__pm61E'
+            'Authorization': 'Bearer BQD0PyMGPfU5V0Vnri_lW2BgaWRqbUHBOrlqESGpDpWsSUQEtAZLOqakW6nRDJQof-Mb8oWd7bjmDhCLvp4'
         });
 
         return this.http.get('https://api.spotify.com/v1/browse/featured-playlists' , { headers })
