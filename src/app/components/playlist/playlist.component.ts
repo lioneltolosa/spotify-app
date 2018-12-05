@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DinnerService } from '../../services/dinner.service';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-playlist',
@@ -9,22 +10,22 @@ import { DinnerService } from '../../services/dinner.service';
 })
 export class PlaylistComponent {
 
-  playlistCategory: any[] = [];
+  playCategory: any[] = [];
 
   constructor(private activatedRoute: ActivatedRoute,
               private dinnerService: DinnerService) {
 
     this.activatedRoute.params.subscribe( params => {
-      this.getPlaylist( params['id']);
+      this.getCategory( params['id']);
     });
   }
 
-  getPlaylist( category_id: String ) {
-    this.dinnerService.getplaylist( category_id )
-      .subscribe( (data: any) => {
+  getCategory( category_id: String ) {
+    this.dinnerService.getCategory( category_id )
+      .subscribe(data => {
         console.log(data);
-        this.playlistCategory = data;
-    });
+        this.playCategory = data;
+      });
   }
 
 

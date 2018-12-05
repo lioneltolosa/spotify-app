@@ -13,18 +13,18 @@ export class DinnerService {
 
     getNewRelease() {
         const headers = new HttpHeaders ({
-            'Authorization': 'Bearer BQCfquYxFOaW5O45XR1QwzOb8Oggjh6AzQWUf4ppEXJb_nxxzm1Q0lO99H3CsG-f4-Xaxr6oh2_ga0aINQY'
+            'Authorization': 'Bearer BQBOlY0GufCLda8ZJytsP703wl_fYCjIor5m5NPjUyDmTzwdWwFK_zpD9m8pPDSpjSXulxz4Cpq81OQzxF4'
         });
 
         return this.http.get('https://api.spotify.com/v1/browse/categories' , { headers });
     }
 
-    getplaylist(category_id: String) {
+    getCategory(category_id: String) {
         const headers = new HttpHeaders ({
-            'Authorization': 'Bearer BQCfquYxFOaW5O45XR1QwzOb8Oggjh6AzQWUf4ppEXJb_nxxzm1Q0lO99H3CsG-f4-Xaxr6oh2_ga0aINQY'
+            'Authorization': 'Bearer BQBOlY0GufCLda8ZJytsP703wl_fYCjIor5m5NPjUyDmTzwdWwFK_zpD9m8pPDSpjSXulxz4Cpq81OQzxF4'
         });
 
-        return this.http.get(`https://api.spotify.com/v1/browse/categories/${ category_id }?country=SE`, { headers });
-            // pipe( map (data => data['playlists'].items ));
+        return this.http.get(`https://api.spotify.com/v1/browse/categories/${ category_id }?country=SE`, { headers })
+            .pipe( map (data => data['name']));
     }
 }

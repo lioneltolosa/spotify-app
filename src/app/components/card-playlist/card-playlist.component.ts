@@ -13,12 +13,7 @@ export class CardPlaylistComponent implements OnInit {
   constructor(private router: Router) { }
 
   viewCategory(item: any) {
-    console.log(item.id);
-
-
-    // console.log(categoryId);
     this.router.navigate( ['/playlist', item.id] );
-
   }
 
   ngOnInit() {
