@@ -22,6 +22,7 @@ import { ROUTES } from './app.routes';
 // Pipes
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { DomseguroPipe } from './pipes/domseguro.pipe';
+import { FeaturedPlaylistsComponent } from './components/featured-playlists/featured-playlists.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { DomseguroPipe } from './pipes/domseguro.pipe';
     DinnerComponent,
     CardPlaylistComponent,
     PlaylistComponent,
+    FeaturedPlaylistsComponent,
   ],
   imports: [
     BrowserModule,
