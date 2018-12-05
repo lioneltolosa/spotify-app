@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DinnerService } from '../../services/dinner.service';
-import { map } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-playlist',
@@ -13,7 +13,8 @@ export class PlaylistComponent {
   playCategory: any[] = [];
 
   constructor(private activatedRoute: ActivatedRoute,
-              private dinnerService: DinnerService) {
+              private dinnerService: DinnerService,
+              private router: Router) {
 
     this.activatedRoute.params.subscribe( params => {
       this.getCategory( params['id']);
@@ -23,10 +24,8 @@ export class PlaylistComponent {
   getCategory( category_id: String ) {
     this.dinnerService.getCategory( category_id )
       .subscribe(data => {
-        console.log(data);
-        this.playCategory = data;
+        console.log(data['playlists'].items);
+        this.playCategory = data['playlists'].items;
       });
   }
-
-
 }

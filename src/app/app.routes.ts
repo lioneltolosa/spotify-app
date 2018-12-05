@@ -6,7 +6,6 @@ import { ArtistComponent } from './components/artist/artist.component';
 import { TrackComponent } from './components/track/track.component';
 import { DinnerComponent } from './components/dinner/dinner.component';
 import { PlaylistComponent } from './components/playlist/playlist.component';
-import { FeaturedPlaylistsComponent } from './components/featured-playlists/featured-playlists.component';
 
 export const ROUTES: Routes = [
     {path: 'home', component: HomeComponent},
@@ -16,7 +15,6 @@ export const ROUTES: Routes = [
     {path: 'track', component: TrackComponent},
     {path: 'dinner', component: DinnerComponent},
     {path: 'playlist/:id', component: PlaylistComponent},
-    {path: 'feature-playlists', component: FeaturedPlaylistsComponent},
     {path: '', pathMatch: 'full', redirectTo: 'home'},
     {path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];

@@ -1,9 +1,11 @@
 <div class="card-columns">
     <div *ngFor="let item of playCategory" class="card puntero">
-        <img class="card-img-top" [src]="item.icons[0].url" alt="Card image cap">
+        <img class="card-img-top" [src]="item.images[0].url" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title">{{ item.name}}</h5>
-            <p class="card-text"></p>
+            <a [href]="item.external_urls.spotify" target="_blank">
+                Ir a la página del artista
+        </a>
         </div>
     </div>
 </div>
